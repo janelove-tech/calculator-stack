@@ -44,11 +44,9 @@ git add .
 git commit -m "Initial commit: multifaceted calculator full stack"
 
 git branch -M main
-git remote add origin https://github.com/YOUR_USERNAME/calculator-stack.git
+git remote add origin https://github.com/janelove-tech/calculator-stack.git
 git push -u origin main
 ```
-
-Replace `YOUR_USERNAME` with your GitHub username.
 
 ## What gets committed
 
@@ -64,12 +62,13 @@ Excluded (via `.gitignore`):
 - `node_modules/`, `dist/`, `.next/`
 - `.env`, `.env.local` (secrets)
 
-## After pushing
+## Repository
 
-Update the clone URL in `README.md`:
+**https://github.com/janelove-tech/calculator-stack**
 
-```markdown
-git clone https://github.com/YOUR_USERNAME/calculator-stack.git
+If CI workflows fail to run, refresh GitHub CLI scopes:
+
+```powershell
+gh auth refresh -s workflow
+git push
 ```
-
-Optionally enable **GitHub Actions** later for CI (build + lint).
