@@ -1,0 +1,60 @@
+export const UNIT_LABELS: Record<string, Record<string, string>> = {
+  length: {
+    m: 'Meters',
+    km: 'Kilometers',
+    cm: 'Centimeters',
+    mm: 'Millimeters',
+    mi: 'Miles',
+    yd: 'Yards',
+    ft: 'Feet',
+    in: 'Inches',
+  },
+  weight: {
+    kg: 'Kilograms',
+    g: 'Grams',
+    mg: 'Milligrams',
+    lb: 'Pounds',
+    oz: 'Ounces',
+    t: 'Metric tons',
+  },
+  volume: {
+    L: 'Liters',
+    mL: 'Milliliters',
+    gal: 'Gallons (US)',
+    qt: 'Quarts',
+    pt: 'Pints',
+    cup: 'Cups',
+    floz: 'Fluid oz',
+  },
+  area: {
+    'm²': 'Sq meters',
+    'km²': 'Sq kilometers',
+    'cm²': 'Sq centimeters',
+    'ft²': 'Sq feet',
+    'in²': 'Sq inches',
+    acre: 'Acres',
+    ha: 'Hectares',
+  },
+  time: {
+    s: 'Seconds',
+    ms: 'Milliseconds',
+    min: 'Minutes',
+    h: 'Hours',
+    d: 'Days',
+    wk: 'Weeks',
+  },
+  temperature: {
+    C: 'Celsius',
+    F: 'Fahrenheit',
+    K: 'Kelvin',
+  },
+};
+
+export const DEFAULT_CATEGORIES: Record<string, string[]> = {
+  length: ['m', 'km', 'cm', 'mm', 'mi', 'yd', 'ft', 'in'],
+  weight: ['kg', 'g', 'mg', 'lb', 'oz', 't'],
+  volume: ['L', 'mL', 'gal', 'qt', 'pt', 'cup', 'floz'],
+  area: ['m²', 'km²', 'cm²', 'ft²', 'in²', 'acre', 'ha'],
+  time: ['s', 'ms', 'min', 'h', 'd', 'wk'],
+  temperature: ['C', 'F', 'K'],
+};

@@ -1,0 +1,37 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum CalculatorMode {
+  STANDARD
+  SCIENTIFIC
+  CONVERTER
+}
+
+model CalculationHistory {
+  id         String         @id @default(uuid())
+  mode       CalculatorMode
+  expression String
+  result     String
+  metadata   Json?
+  createdAt  DateTime       @default(now())
+
+  @@index([createdAt(sort: Desc)])
+  @@map("calculation_history")
+}
+
+model SavedConversion {
+  id        String   @id @default(uuid())
+  label     String?
+  category  String
+  fromUnit  String
+  toUnit    String
+  createdAt DateTime @default(now())
+
+  @@map("saved_conversions")
+}
