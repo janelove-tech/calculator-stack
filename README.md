@@ -43,7 +43,7 @@ Run the app locally, then open **http://localhost:3000**.
 ### 1. Clone and install
 
 ```powershell
-git clone https://github.com/YOUR_USERNAME/calculator-stack.git
+git clone https://github.com/janelove-tech/calculator-stack.git
 cd calculator-stack
 .\setup.ps1
 ```
